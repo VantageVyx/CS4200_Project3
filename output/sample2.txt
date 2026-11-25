@@ -1,0 +1,511 @@
+Finished board setup
+  1  2  3  4  5  6  7  8
+A -  -  -  -  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H -  -  -  -  -  -  -  -
+How many seconds per move? (1-30, press enter for 5): 1
+Bot vs Bot mode for testing? (y/n): n
+Do you (O) want to go first? (y/n): y
+Enter your move (e.g., e5): h1
+Human (O) moves: h1
+  1  2  3  4  5  6  7  8
+A -  -  -  -  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  -  -  -  -  -  -  -
+Player vs. Opponent
+1. h1
+Completed plies:4 Deepest plies reached:5
+Computer (X) moves to: a1
+  1  2  3  4  5  6  7  8
+A X  -  -  -  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  -  -  -  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+Enter your move (e.g., e5): h4
+Human (O) moves: h4
+  1  2  3  4  5  6  7  8
+A X  -  -  -  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  -  -  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4
+Completed plies:3 Deepest plies reached:4
+Computer (X) moves to: a2
+  1  2  3  4  5  6  7  8
+A X  X  -  -  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  -  -  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+Enter your move (e.g., e5): a4
+Human (O) moves: a4
+  1  2  3  4  5  6  7  8
+A X  X  -  O  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  -  -  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4
+Completed plies:5 Deepest plies reached:6
+Computer (X) moves to: a3
+  1  2  3  4  5  6  7  8
+A X  X  X  O  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  -  -  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+Enter your move (e.g., e5): h3
+Human (O) moves: h3
+  1  2  3  4  5  6  7  8
+A X  X  X  O  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  -  O  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3
+Completed plies:3 Deepest plies reached:4
+Computer (X) moves to: h2
+  1  2  3  4  5  6  7  8
+A X  X  X  O  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  -  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+Enter your move (e.g., e5): f3
+Human (O) moves: f3
+  1  2  3  4  5  6  7  8
+A X  X  X  O  -  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3
+Completed plies:4 Deepest plies reached:5
+Computer (X) moves to: a5
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  -  -  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+Enter your move (e.g., e5): h6
+Human (O) moves: h6
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  -  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6
+Completed plies:3 Deepest plies reached:4
+Computer (X) moves to: h5
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  -  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+Enter your move (e.g., e5): f2
+Human (O) moves: f2
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F -  O  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2
+Completed plies:4 Deepest plies reached:5
+Computer (X) moves to: f1
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  -  -  -  -  -  -  -
+F X  O  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+Enter your move (e.g., e5): e2
+Human (O) moves: e2
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  -  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  O  -  -  -  -  -  -
+F X  O  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2
+Completed plies:4 Deepest plies reached:5
+Computer (X) moves to: c2
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  O  -  -  -  -  -  -
+F X  O  O  -  -  -  -  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+Enter your move (e.g., e5): f7
+Human (O) moves: f7
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  -  -  -  -  -  -  -
+E -  O  -  -  -  -  -  -
+F X  O  O  -  -  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7
+Completed plies:5 Deepest plies reached:6
+Computer (X) moves to: d2
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  -  -  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  X  -  -  -  -  -  -
+E -  O  -  -  -  -  -  -
+F X  O  O  -  -  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+Enter your move (e.g., e5): b2
+Human (O) moves: b2
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  -  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  X  -  -  -  -  -  -
+E -  O  -  -  -  -  -  -
+F X  O  O  -  -  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2
+Completed plies:4 Deepest plies reached:5
+Computer (X) moves to: e1
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  -  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  X  -  -  -  -  -  -
+E X  O  -  -  -  -  -  -
+F X  O  O  -  -  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2 e1
+Enter your move (e.g., e5): f5
+Human (O) moves: f5
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  -  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  X  -  -  -  -  -  -
+E X  O  -  -  -  -  -  -
+F X  O  O  -  O  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2 e1
+11. f5
+Completed plies:4 Deepest plies reached:5
+Computer (X) moves to: f4
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  -  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  X  -  -  -  -  -  -
+E X  O  -  -  -  -  -  -
+F X  O  O  X  O  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2 e1
+11. f5 f4
+Enter your move (e.g., e5): b3
+Human (O) moves: b3
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  O  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D -  X  -  -  -  -  -  -
+E X  O  -  -  -  -  -  -
+F X  O  O  X  O  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2 e1
+11. f5 f4
+12. b3
+Completed plies:3 Deepest plies reached:3
+Computer (X) moves to: d1
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  O  -  -  -  -  -
+C -  X  -  -  -  -  -  -
+D X  X  -  -  -  -  -  -
+E X  O  -  -  -  -  -  -
+F X  O  O  X  O  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2 e1
+11. f5 f4
+12. b3 d1
+Enter your move (e.g., e5): c2
+Illegal move: that square is already taken.
+Enter your move (e.g., e5): c3
+Human (O) moves: c3
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  O  -  -  -  -  -
+C -  X  O  -  -  -  -  -
+D X  X  -  -  -  -  -  -
+E X  O  -  -  -  -  -  -
+F X  O  O  X  O  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2 e1
+11. f5 f4
+12. b3 d1
+13. c3
+Completed plies:1 Deepest plies reached:1
+Computer (X) moves to: c1
+  1  2  3  4  5  6  7  8
+A X  X  X  O  X  -  -  -
+B -  O  O  -  -  -  -  -
+C X  X  O  -  -  -  -  -
+D X  X  -  -  -  -  -  -
+E X  O  -  -  -  -  -  -
+F X  O  O  X  O  -  O  -
+G -  -  -  -  -  -  -  -
+H O  X  O  O  X  O  -  -
+Player vs. Opponent
+1. h1 a1
+2. h4 a2
+3. a4 a3
+4. h3 h2
+5. f3 a5
+6. h6 h5
+7. f2 f1
+8. e2 c2
+9. f7 d2
+10. b2 e1
+11. f5 f4
+12. b3 d1
+13. c3 c1 wins
+Winner is: X
+PS C:\Users\ruggl\OneDrive\Documents\GitHub\CS4200_Project3> 
