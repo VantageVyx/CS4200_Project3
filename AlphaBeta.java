@@ -71,7 +71,7 @@ public class AlphaBeta {
 
             if (finishedDepth && roundBestR != -1) {
                 bestMove = new int[]{roundBestR, roundBestC};
-                completedDepth = maxDepth; //recording that this plie finished 
+                completedDepth = maxDepth; // recording that this plie finished
                 if (roundBestScore >= 100000) {
                     break;
                 }
@@ -85,11 +85,11 @@ public class AlphaBeta {
     }
 
     private int search(char[][] board, int depth, int rootTargetDepth, int alpha, int beta, boolean isMax) {
-        int plyReached = rootTargetDepth - depth; // handling recording deepest plies 
-        if (plyReached > deepestPlyReached) {      
-            deepestPlyReached = plyReached;        
+        int plyReached = rootTargetDepth - depth; // handling recording deepest plies
+        if (plyReached > deepestPlyReached) {
+            deepestPlyReached = plyReached;
         }
-        
+
         if (System.nanoTime() >= endTime) {
             outOfTime = true;
             return 0;
@@ -114,8 +114,10 @@ public class AlphaBeta {
                         board[r][c] = me;
                         int score = search(board, depth - 1, rootTargetDepth, alpha, beta, false);
                         board[r][c] = '-';
-
+                        // i want to AGAIN check the time here incase this goes on too long and we're already past the time lmiit
+                        if (System.nanoTime() >= endTime) outOfTime = true;
                         if (outOfTime) return 0;
+
                         if (score > best) best = score;
                         if (best > alpha) alpha = best;
                         if (alpha >= beta) return best;
@@ -131,8 +133,10 @@ public class AlphaBeta {
                         board[r][c] = opp;
                         int score = search(board, depth - 1, rootTargetDepth, alpha, beta, true);
                         board[r][c] = '-';
-
+                        // another time check incase loop went on longer than expected
+                        if (System.nanoTime() >= endTime) outOfTime = true;
                         if (outOfTime) return 0;
+
                         if (score < best) best = score;
                         if (best < beta) beta = best;
                         if (alpha >= beta) return best;
@@ -166,6 +170,7 @@ public class AlphaBeta {
         return 0;
     }
 
+    // #2 Minimal / Threat-Only evaluation: only scores 3-in-a-row windows (rows & cols only)
     private int evalBoard(char[][] board) {
         int total = 0;
 
@@ -201,11 +206,7 @@ public class AlphaBeta {
     private int scoreCounts(int myCount, int oppCount) {
         if (myCount > 0 && oppCount > 0) return 0;
         if (myCount == 3) return 50;
-        if (myCount == 2) return 10;
-        if (myCount == 1) return 1;
         if (oppCount == 3) return -60;
-        if (oppCount == 2) return -10;
-        if (oppCount == 1) return -1;
         return 0;
     }
 }
