@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -8,18 +10,17 @@ public class Main {
     static int thinkTime; 
     private final Scanner scanner = new Scanner(System.in); //global scanner all methods can use
 
-    public static void  main(String[] args) {
+    public static void main(String[] args) {
         Main game = new Main();
         game.setupBoard();
         game.runGame();
-
-
     }
 
-    public void runGame(){
+    public void runGame() {
         setupBoard();
         System.out.println("Finished board setup");
         printBoard();
+
         //ask think time
         thinkTime = askThinkTime();
 
@@ -29,47 +30,66 @@ public class Main {
         // ask human if they want to go first
         boolean humanFirst = !botVsBot && askHumanFirst();
 
-        
+        List<String> moves = new ArrayList<>(); //store moves for prettyprint during game
 
         AlphaBeta botX = new AlphaBeta('X');
         AlphaBeta botO = new AlphaBeta('O');
 
-        
         boolean xTurn = !humanFirst; //x= computer, O = human
 
-        while(true){
-            if(xTurn){
-                int[] move = botX.chooseMove(board, thinkTime);
+        // printBoard();
+        // printMoveHistory(moves, false);
+
+        while (true) {
+            int[] move;
+            if (xTurn) {
+                move = botX.chooseMove(board, thinkTime);
                 board[move[0]][move[1]] = 'X';
-                System.out.println("Computer (X) moves to: "+ toCoord(move[0], move[1]));
-            }else if(botVsBot){
-                int[] move = botO.chooseMove(board, thinkTime);
+                System.out.println("Computer (X) moves to: " + toCoord(move[0], move[1]));
+            } else if (botVsBot) {
+                move = botO.chooseMove(board, thinkTime);
                 board[move[0]][move[1]] = 'O';
-                System.out.println("Computer (O) moves to: "+ toCoord(move[0], move[1]));
-            }else{
-                int[] move = askHumanMove();
+                System.out.println("Computer (O) moves to: " + toCoord(move[0], move[1]));
+            } else {
+                move = askHumanMove();
                 board[move[0]][move[1]] = 'O';
                 System.out.println("Human (O) moves: " + toCoord(move[0], move[1]));
-            
             }
 
-            printBoard();
+            moves.add(toCoord(move[0], move[1])); //adding move to history
 
             //check state
             char winner = checkWinner();
-            if(winner!='-'){
-                System.out.println("Winner is: "+winner);
+            boolean hasWinner = (winner != '-');
+
+            printBoard();
+            printMoveHistory(moves, hasWinner);
+
+            if (hasWinner) {
+                System.out.println("Winner is: " + winner);
                 break;
             }
-            if(isBoardFull()){
+            if (isBoardFull()) {
                 System.out.println("Board is full, this game is a draw.");
                 break;
             }
             xTurn = !xTurn; //swap turns for the next loop iteration
         }
-
     }
-private int askThinkTime() {
+
+    private void printMoveHistory(List<String> moves, boolean lastMoveWon) {
+        System.out.println("Player vs. Opponent");
+        for (int i = 0; i < moves.size(); i += 2) {
+            int turnNum = (i / 2) + 1;
+            String firstMove = moves.get(i);
+            String secondMove = (i + 1 < moves.size()) ? " " + moves.get(i + 1) : "";
+            boolean isLastPair = (i + 2 >= moves.size());
+            String winSuffix = (isLastPair && lastMoveWon) ? " wins" : "";
+            System.out.println(turnNum + ". " + firstMove + secondMove + winSuffix);
+        }
+    }
+
+    private int askThinkTime() {
         System.out.print("How many seconds per move? (1-30, press enter for 5): ");
         String ans = scanner.nextLine().trim();
 
@@ -112,21 +132,19 @@ private int askThinkTime() {
         }
     }
 
-    public void setupBoard(){
-        for(int i = 0; i < 8; i++){
-            for(int j = 0; j < 8; j++){
+    public void setupBoard() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
                 board[i][j] = '-';
             }
         }
-        
     }
 
- 
-    public void printBoard(){
+    public void printBoard() {
         char[] letters = {'A','B','C','D','E','F','G','H'};
         System.out.println("  1  2  3  4  5  6  7  8");
-        for(int i=0; i < 8; i++){
-            System.out.println(letters[i]+ Arrays.toString(board[i]).replace(",", " ").replace("[", " ").replace("]", ""));
+        for (int i = 0; i < 8; i++) {
+            System.out.println(letters[i] + Arrays.toString(board[i]).replace(",", " ").replace("[", " ").replace("]", ""));
         }
         return;
     }
@@ -180,6 +198,7 @@ private int askThinkTime() {
             System.out.println("Illegal move: use row A-H and column 1-8 (e.g., e5).");
         }
     }
+
     private boolean askHumanFirst() {
         while (true) {
             System.out.print("Do you (O) want to go first? (y/n): ");
