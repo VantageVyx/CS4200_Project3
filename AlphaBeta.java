@@ -3,6 +3,8 @@ public class AlphaBeta {
     char opp;
     long endTime;
     boolean outOfTime;
+    private int deepestPlyReached;
+    private int completedDepth;
 
     public AlphaBeta(char me) {
         this.me = me;
@@ -16,6 +18,8 @@ public class AlphaBeta {
     public int[] chooseMove(char[][] board, int seconds) {
         endTime = System.nanoTime() + seconds * 1000000000L - 25000000L;
         outOfTime = false;
+        this.deepestPlyReached = 0;
+        this.completedDepth = 0;
 
         int[] bestMove = new int[]{-1, -1};
         // pick first open spot just in case time runs out super fast
@@ -41,7 +45,7 @@ public class AlphaBeta {
                 for (int c = 0; c < 8; c++) {
                     if (board[r][c] == '-') {
                         board[r][c] = me;
-                        int val = search(board, maxDepth - 1, alpha, beta, false);
+                        int val = search(board, maxDepth - 1, maxDepth, alpha, beta, false);
                         board[r][c] = '-';
 
                         if (System.nanoTime() >= endTime) {
@@ -67,6 +71,7 @@ public class AlphaBeta {
 
             if (finishedDepth && roundBestR != -1) {
                 bestMove = new int[]{roundBestR, roundBestC};
+                completedDepth = maxDepth; //recording that this plie finished 
                 if (roundBestScore >= 100000) {
                     break;
                 }
@@ -74,11 +79,17 @@ public class AlphaBeta {
                 break;
             }
         }
+        System.out.println("Completed plies:" + completedDepth + " Deepest plies reached:" + deepestPlyReached);
 
         return bestMove;
     }
 
-    private int search(char[][] board, int depth, int alpha, int beta, boolean isMax) {
+    private int search(char[][] board, int depth, int rootTargetDepth, int alpha, int beta, boolean isMax) {
+        int plyReached = rootTargetDepth - depth; // handling recording deepest plies 
+        if (plyReached > deepestPlyReached) {      
+            deepestPlyReached = plyReached;        
+        }
+        
         if (System.nanoTime() >= endTime) {
             outOfTime = true;
             return 0;
@@ -101,7 +112,7 @@ public class AlphaBeta {
                 for (int c = 0; c < 8; c++) {
                     if (board[r][c] == '-') {
                         board[r][c] = me;
-                        int score = search(board, depth - 1, alpha, beta, false);
+                        int score = search(board, depth - 1, rootTargetDepth, alpha, beta, false);
                         board[r][c] = '-';
 
                         if (outOfTime) return 0;
@@ -118,7 +129,7 @@ public class AlphaBeta {
                 for (int c = 0; c < 8; c++) {
                     if (board[r][c] == '-') {
                         board[r][c] = opp;
-                        int score = search(board, depth - 1, alpha, beta, true);
+                        int score = search(board, depth - 1, rootTargetDepth, alpha, beta, true);
                         board[r][c] = '-';
 
                         if (outOfTime) return 0;
